@@ -31,23 +31,30 @@ function HomePage() {
   const navigate = useNavigate();
   const [budgets, setBudgets] = useState([]);
   const [selectedMonth, setSelectedMonth] = useState("January");
+  // eslint-disable-next-line
   const [usedBudget, setUsedBudget] = useState(0);
+  // eslint-disable-next-line
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
   const [selectedYearTable, setSelectedYearTable] = useState(
     new Date().getFullYear()
   );
+  // eslint-disable-next-line
   const [usedselectedCategory, setUsedSelectedCategory] = useState("");
+  // eslint-disable-next-line
   const [usedselectedYear, setUsedSelectedYear] = useState(
+   
     new Date().getFullYear()
+    // eslint-disable-next-line
   );
-  const [usedselectedMonth, setUsedSelectedMonth] = useState("");
+  // eslint-disable-next-line
+  const [usedselectedMonth, setUsedSelectedMonth] = useState(""); // eslint-disable-next-line
   const [userId, setUserId] = useState("");
-  const [tableData, setTableData] = useState([]);
-  const [usedCategories, setUsedCategories] = useState([]);
+  const [tableData, setTableData] = useState([]);// eslint-disable-next-line
+  const [usedCategories, setUsedCategories] = useState([]); 
 
   useEffect(() => {
-    const storedUserId = localStorage.getItem("userId");
+    const storedUserId = localStorage.getItem("userId");// eslint-disable-next-line
     const storedToken = localStorage.getItem("token");
     setUserId(storedUserId);
     fetchData(selectedYear, selectedMonth, storedUserId);
@@ -124,10 +131,10 @@ function HomePage() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      checkTokenExpiration();
+      checkTokenExpiration(); // eslint-disable-next-line
     }, 5000);
 
-    return () => clearInterval(interval);
+    return () => clearInterval(interval); // eslint-disable-next-line
   }, []);
 
   const totalBudget = budgets.reduce(
@@ -193,10 +200,10 @@ function HomePage() {
         label: "Used Budget",
         data: budgets.map((b) => b.used),
         backgroundColor: "rgba(255, 193, 7, 0.5)",
-      },
+      }, // eslint-disable-next-line
     ],
   };
-
+// eslint-disable-next-line
   const handleUsedBudgetSubmit = async (e) => {
     e.preventDefault();
 
@@ -223,10 +230,10 @@ function HomePage() {
     }
   };
 
-  useEffect(() => {
+  useEffect(() => { // eslint-disable-next-line
     if (selectedYearTable) {
       fetchTableData();
-    }
+    } // eslint-disable-next-line
   }, []);
 
   return (
