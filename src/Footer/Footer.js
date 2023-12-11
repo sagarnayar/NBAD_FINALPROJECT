@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer className="bottom" style={{ backgroundColor: '#ddd', color: '#333', padding: '10px' }} role="contentinfo"> 
-     {/*eslint-disable-next-line*/}
+    
       <div className="center" aria-labelledby="copyright-label">
         {/* Copyright Information */}
         <p id="copyright-label" style={{ fontWeight: 'bold', color: '#000' }}>
