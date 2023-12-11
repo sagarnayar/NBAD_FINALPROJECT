@@ -66,7 +66,7 @@ function HomePage() {
 
   const fetchData = (year, month, userId) => {
     axios
-      .get(`http://64.176.213.182:3002/api/get-budgets/${year}/${month}/${userId}`)
+      .get(`http://155.138.223.29:3002/api/get-budgets/${year}/${month}/${userId}`)
       .then((response) => {
         setBudgets(response.data);
       })
@@ -79,7 +79,7 @@ function HomePage() {
     const storedUserId = localStorage.getItem("userId");
     axios
       .get(
-        `http://64.176.213.182:3002/api/get-table-data/${selectedYearTable}/${storedUserId}`
+        `http://155.138.223.29:3002/api/get-table-data/${selectedYearTable}/${storedUserId}`
       )
       .then((response) => {
         setTableData(response.data);
@@ -91,7 +91,7 @@ function HomePage() {
 
   const fetchUsedCategories = () => {
     axios
-      .get("http://64.176.213.182:3002/api/get-all-categories")
+      .get("http://155.138.223.29:3002/api/get-all-categories")
       .then((response) => {
         setUsedCategories(response.data);
         setUsedSelectedCategory(response.data[0]);
@@ -219,7 +219,7 @@ function HomePage() {
     };
 
     try {
-      await axios.post("http://64.176.213.182:3002/api/enter-used-budget", payload);
+      await axios.post("http://155.138.223.29:3002/api/enter-used-budget", payload);
       console.log("Used Budget update successful");
       fetchData(selectedMonth, userId);
     } catch (error) {
