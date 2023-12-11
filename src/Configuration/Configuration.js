@@ -12,7 +12,7 @@ function ConfigurePage({ updateHomePageData }) {
   useEffect(() => {
     const fetchAllCategories = async () => {
       try {
-        const response = await axios.get('http://45.77.107.121:3002/api/get-all-categories');
+        const response = await axios.get('http://64.176.221.128:3002/api/get-all-categories');
         setAllCategories(response.data);
       } catch (error) {
         console.error('Error fetching categories:', error);
@@ -42,7 +42,7 @@ function ConfigurePage({ updateHomePageData }) {
     };
 
     try {
-      const response = await axios.post('http://45.77.107.121:3002/api/configure-budget', budgetData);
+      const response = await axios.post('http://64.176.221.128:3002/api/configure-budget', budgetData);
       console.log(response.data);
 
       setAllocationSuccess(true);

@@ -64,7 +64,7 @@ function Menu() {
 
   const fetchUserDetails = async (userId) => {
     try {
-      const response = await axios.get(`http://45.77.107.121:${3002}/api/users/${userId}`);
+      const response = await axios.get(`http://64.176.221.128:${3002}/api/users/${userId}`);
       const userData = response.data;
       setUserFirstName(userData.firstname);
     } catch (error) {
