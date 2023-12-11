@@ -64,7 +64,7 @@ function Menu() {
 
   const fetchUserDetails = async (userId) => {
     try {
-      const response = await axios.get(`http://localhost:${3000}/api/users/${userId}`);
+      const response = await axios.get(`http://localhost:${3002}/api/users/${userId}`);
       const userData = response.data;
       setUserFirstName(userData.firstname);
     } catch (error) {
