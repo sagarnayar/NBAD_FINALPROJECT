@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-d
 import './App.css'
 import Menu from './Menu/Menu';
 import Dashboard from './Dashboard/Dashboard';
+// eslint-disable-next-line
 import Footer from './Footer/Footer';
 import LoginPage from './LoginPage/LoginPage';
 import RegisterPage from './RegisterPage/RegisterPage';
