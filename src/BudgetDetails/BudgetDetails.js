@@ -65,7 +65,7 @@ const EnterUsedBudget = () => {
             onChange={(e) => setUsedSelectedMonth(e.target.value)}
             style={styles.input}
           >
-            {[
+            {[ "select None",
               "January",
               "February",
               "March",

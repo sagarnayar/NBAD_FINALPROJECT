@@ -248,7 +248,7 @@ function HomePage() {
                 value={selectedMonth}
                 onChange={(e) => setSelectedMonth(e.target.value)}
               >
-                {[
+                {[ "select none",
                   "January",
                   "February",
                   "March",
