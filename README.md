@@ -50,7 +50,7 @@ This is an application for personal budget management built with React for the f
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/Sravani1915/NBADProject.git
+    git clone https://github.com/sagarnayar/NBAD_FINALPROJECT.git
     ```
 
 2. Install dependencies:
